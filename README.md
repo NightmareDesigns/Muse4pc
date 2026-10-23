@@ -1,10 +1,10 @@
-# Muse4pc
+# Nightmare Chat
 
-your Muse ai on your windows PC
+your chat window for Muse on your windows PC
 
-## Muse for Windows (unofficial)
+## Nightmare Chat (unofficial)
 
-A one-click Windows desktop client for [Muse](https://muse.ai).
+A one-click Windows desktop client for use with [Muse](https://muse.ai).
 
 **Download the `.exe`, double-click it, you're in.** No installer wizard,
 no Node, no Python, no other dependencies — Electron is bundled inside
@@ -19,7 +19,7 @@ the single portable file.
 ## Download (for people, not developers)
 
 1. Go to the **Releases** page of this repo.
-2. Download `Muse-for-Windows-0.2.0.exe`.
+2. Download `Nightmare-Chat-0.2.0.exe`.
 3. Double-click it. That's it.
 
 Windows SmartScreen may say "Windows protected your PC" the first time,
@@ -50,7 +50,7 @@ npm install
 npm run dist
 ```
 
-The single portable file lands in `dist\Muse-for-Windows-0.2.0.exe`.
+The single portable file lands in `dist\Nightmare-Chat-0.2.0.exe`.
 
 Run it without building:
 
@@ -62,7 +62,7 @@ npm start
 
 ```powershell
 git add .
-git commit -m "Muse for Windows v0.2.0"
+git commit -m "Nightmare Chat v0.2.0"
 git push origin main
 git tag v0.2.0
 git push origin v0.2.0
@@ -71,12 +71,12 @@ git push origin v0.2.0
 Pushing a `v*` tag runs the GitHub Actions workflow in
 `.github/workflows/release.yml`, which builds on a real Windows runner
 and attaches the portable `.exe` to a GitHub Release automatically.
-You can also upload `dist\Muse-for-Windows-0.2.0.exe` to a release by hand.
+You can also upload `dist\Nightmare-Chat-0.2.0.exe` to a release by hand.
 
 ## How it works
 
 - `src/main.js` — Electron main process: window, tray, shortcuts,
-  single-instance lock, and settings in `%APPDATA%\Muse for Windows`
+  single-instance lock, and settings in `%APPDATA%\muse-windows`
 - `src/quick-chat.html` — the small Alt+Space launcher window
 - `src/preload.js` — a tiny, sandboxed bridge for the quick-chat page
   only. The Muse web app itself gets no Node/Electron access.

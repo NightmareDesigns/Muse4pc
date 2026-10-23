@@ -17,13 +17,13 @@
       "createStartMenuShortcut": true,
       "oneClick": true,
       "perMachine": false,
-      "shortcutName": "Muse"
+      "shortcutName": "Nightmare Chat"
     },
     "portable": {
-      "artifactName": "Muse-for-Windows-${version}.exe",
+      "artifactName": "Nightmare-Chat-${version}.exe",
       "requestExecutionLevel": "user"
     },
-    "productName": "Muse for Windows",
+    "productName": "Nightmare Chat",
     "win": {
       "icon": "assets/icon.ico",
       "target": [
@@ -31,7 +31,7 @@
       ]
     }
   },
-  "description": "Unofficial Windows desktop client for Muse \u2014 one-click portable .exe, no dependencies. System tray, quick-chat hotkey, and launch on startup. A community wrapper around muse.ai, not affiliated with Meta.",
+  "description": "Nightmare Chat \u2014 unofficial Windows desktop client for use with Muse (muse.ai). Not affiliated with Meta. One-click portable .exe, no dependencies. System tray, quick-chat hotkey, and launch on startup.",
   "devDependencies": {
     "electron": "^33.2.0",
     "electron-builder": "^24.13.3"
