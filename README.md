@@ -29,21 +29,10 @@ Only download releases from a repo you trust.
 ## What you get
 
 - Muse in its own window, not buried in browser tabs
-- **Steve on your desktop** — a free-roaming desktop pet (transparent,
-  always on top) who wanders along the bottom of your screen, turns
-  around at the edges, and bobs as he walks. Drag him anywhere and he'll
-  sit there a while before wandering off again.
-- **Pop-up notifications from Steve** — when Steve has something to say
-  he stops, jumps, and pops a speech bubble. Click the bubble (or his
-  **Chat** button) to open Muse. If Steve is hidden, it arrives as a
-  normal Windows notification instead.
-  Try it: tray menu → **Make Steve say hi**.
 - **System tray** — closing the window minimizes to the tray, Muse keeps running
 - **Quick Chat** — press `Alt + Space` anywhere in Windows
   (falls back to `Ctrl + Shift + Space` if Alt+Space is taken)
 - **Start on login** — toggle it from the tray menu
-- Right-click Steve for his menu: Chat, Say hi, Roam on/off, Hide Steve.
-  Roaming and visibility are also toggles in the tray menu.
 - External links open in your default browser; Muse / Meta sign-in
   stays inside the app
 - Single-instance: launching it again just brings the window forward
@@ -87,12 +76,7 @@ You can also upload `dist\Muse-for-Windows-0.2.0.exe` to a release by hand.
 ## How it works
 
 - `src/main.js` — Electron main process: window, tray, shortcuts,
-  single-instance lock, settings in `%APPDATA%\Muse for Windows`, and
-  the desktop pet: roaming loop, edge turning, and `showPetNotification()`,
-  the one function anything in the app calls to make Steve announce
-  something in a speech bubble
-- `src/pet.html` — Steve himself: transparent cut-out (`assets/pet.png`),
-  bob/jump animations, speech bubble, Chat button, drag-to-move
+  single-instance lock, and settings in `%APPDATA%\Muse for Windows`
 - `src/quick-chat.html` — the small Alt+Space launcher window
 - `src/preload.js` — a tiny, sandboxed bridge for the quick-chat page
   only. The Muse web app itself gets no Node/Electron access.
