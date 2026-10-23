@@ -1,0 +1,57 @@
+{
+  "author": "Caleb (NightmareDesigns)",
+  "build": {
+    "appId": "ai.muse.windows.unofficial",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "nsis": {
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "oneClick": true,
+      "perMachine": false,
+      "shortcutName": "Muse"
+    },
+    "portable": {
+      "artifactName": "Muse-for-Windows-${version}.exe",
+      "requestExecutionLevel": "user"
+    },
+    "productName": "Muse for Windows",
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        "portable"
+      ]
+    }
+  },
+  "description": "Unofficial Windows desktop client for Muse \u2014 one-click portable .exe, no dependencies. System tray, quick-chat hotkey, and launch on startup. A community wrapper around muse.ai, not affiliated with Meta.",
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "license": "Apache-2.0",
+  "main": "src/main.js",
+  "name": "muse4pc",
+  "private": false,
+  "scripts": {
+    "dev": "electron . --dev",
+    "dist": "electron-builder --win portable",
+    "dist:installer": "electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable",
+    "pack": "electron-builder --dir",
+    "start": "electron ."
+  },
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NightmareDesigns/Muse4pc.git"
+  },
+  "homepage": "https://github.com/NightmareDesigns/Muse4pc"
+}
