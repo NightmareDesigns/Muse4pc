@@ -36,7 +36,7 @@
     "electron": "^33.2.0",
     "electron-builder": "^24.13.3"
   },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "main": "src/main.js",
   "name": "muse4pc",
   "private": false,
